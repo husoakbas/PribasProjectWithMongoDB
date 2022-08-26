@@ -1,0 +1,92 @@
+Requirement:
+
+A tool to track important moments with exact date time information and attached documents to answer one question: What happened?
+All events, moments etc. can be created in a timeline and can be tagged.
+
+Later it can be extended to a social platform where people share moments to answer “What happened?” with evidence documents.
+
+Model:
+
+user:{
+	userid: ObjectId
+	username: String,
+        email: String,
+        password: String,
+            ...
+} 
+
+timeline:{
+	title: String,
+        description: String
+        moments: [  MomentObj ],
+        userid: ref,
+        creation_date: datetime,
+        tags: [ String ] 
+}
+
+moment:{
+	title: String,
+        description: String,
+        moment_date: datetime,
+        attachments: [ File ],
+        creation_date: datetime
+} 
+
+ 
+TODO: 
+
+1. API Design (REST)
+2. Implementation, Documentation
+3. Share code on github
+3. If possible dockerize your service for deployment
+4. A small document (README) where you decscribe your solution shortly
+
+API should allow f
+1. Timeline Creation / Update / Delete
+2. Moments Creation / Update / Delete
+3. Timeline Listing
+4. Timeline Presentation (Moment Listing)
+5. Search in Moments / Timeline
+
+
+Notes: 
+We expect you to use Java, Spring ecosystem tools for implementation.
+For data persistency MongoDB is preferred but you are free to choose any other.
+You do not need to implement all features but please complete as much as you can.
+
+fData:
+
+{
+  "title": "pribas gmbh history timeline",
+  "description": "keeps important moments of pribas history",
+  "userid": 1,
+  "creation_date": "09-09-2021",
+  "tags": [
+    "business",
+    "work",
+    "pribas"
+  ],
+  "moments": [
+    {
+      "title": "company establishment",
+      "description": "pribas gmbh established in Frankfurt to provide IT solutions for airline industry",
+      "moment_date": "09-09-1990 14:00UTC",
+      "attachments": [],
+      "creation_date": "09-09-2021"
+    },
+    {
+      "title": "proprietary b2b distribution",
+      "description": "started proprietary b2b distribution",
+      "moment_date": "01-06-1995 14:00UTC",
+      "attachments": [],
+      "creation_date": "09-09-2021"
+    },
+    {
+      "title": "b2b booking UIs",
+      "description": "first implementation of b2b booking UIs",
+      "moment_date": "01-06-2000 14:00UTC",
+      "attachments": [],
+      "creation_date": "09-09-2021"
+    }
+  ]
+}
