@@ -1,0 +1,39 @@
+{     
+        "title": "title1",
+        "description": "description1",
+        "user": {
+            "userid": "1",
+            "userName": "user1",
+            "email": "user1@gmail.com",
+            "password": "1234"
+        },
+        "creationDate": "13-07-2022",
+        "tags": [
+            "business",
+            "work",
+            "pribas"
+        ],
+        "moments": [
+            {
+                "title": "building",
+                "description": "pribas gmbh established in Frankfurt to provide IT solutions for airline industry",
+                "moment_date": "09-09-1990 14:40:20",
+                "creationDate": "10-07-2022",
+                "attachments":[]
+            },
+            {
+                "title": "proprietary b2b distribution",
+                "description": "started proprietary b2b distribution",
+                "moment_date": "01-06-1995 14:00UTC",
+                "creationDate": "10-07-2022",
+                "attachments":[]
+            },
+            {
+                "title": "b2b booking UIs",
+                "description": "first implementation of b2b booking UIs",
+                "moment_date": "01-06-2000 14:00UTC",
+                "creationDate": "10-07-2022",
+                "attachments": []
+            }
+        ]
+}    
